@@ -1,0 +1,358 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"Gothic A1",sans-serif;
+
+}
+a{text-decoration: none; color: #fff;}
+li {
+  list-style: none;
+}
+.clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin: 0;
+}
+
+.flex{display: flex; flex-wrap: wrap; justify-content: center;}
+.nav{
+  background-color:#26d0c9;
+  color:#fff;
+  height:90px;
+}
+.nav img,footer img{
+  width: 115px;
+}
+.nav h1,footer h1{
+  padding:24px 40px;
+  float:left;
+}
+
+
+.nav ul li{
+  display:inline-block;
+  padding:33px 20px;
+  font-size: 18px;
+}
+.nav li a:hover{
+  border-bottom: 2px solid hsl(342, 60%, 66%);
+}
+.container{
+    margin:90px 80px;
+}
+
+.main-heading{
+  position: relative;
+  background-image: url(/img/laptop.jpg) ;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 500px;
+  color: #fff; 
+
+}
+.main-heading::before{
+  position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+     z-index:1;
+}
+
+.heading{
+  position:relative;
+  z-index: 2;
+  color: ffff;
+  opacity: .9;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+}
+.heading h1{
+ font-size:70px;
+ letter-spacing:5px;
+}
+.heading h1 span{
+ color:#ff4a4a;
+}
+
+.heading p{
+font-size:40px;
+}
+
+/*LESSON SECTION*/
+
+.lesson h3{
+ font-size:28px;
+ margin-bottom:15px;
+ border-bottom:2px solid #dee7ec;
+ padding-bottom: 15px;
+
+ 
+}
+.lesson div{
+  flex: 20%;
+  
+}
+
+
+.lesson .border{
+  border: 1px solid rgb(216, 207, 208);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top:50px;
+  padding-bottom:5px;
+  margin-right:25px;
+  
+}
+.lesson img{
+  width: 100%;
+}
+.lesson p{
+  padding-top:10px;
+   font-size:18px;
+   text-align: center;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.lesson_banner{
+  position: relative;
+  background-image: url(/img/laptop.jpg) ;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 400px;
+  color: #fff; 
+}
+.lesson_banner::before{
+  position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 31, 48, 0.8);
+     z-index:1;
+
+}
+.lesson_head{
+  width:50%;
+  line-height:2em;
+  letter-spacing:3px;
+
+}
+/* ABOUT */
+.about{
+  position: relative;
+  background-image: url(/img/about_img.jpg) ;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 400px;
+  color: #fff; 
+
+}
+.about::before{
+  position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 31, 48, 0.8);
+     z-index:1;
+}
+
+.about_head,.lesson_head,.contact_head{
+  position:relative;
+  z-index: 2;
+  color: ffff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 120px;
+  font-size: 26px;
+}
+.about_head h1{
+  width: 700px;
+  margin: 0 auto;
+  line-height: 1.5em;
+  letter-spacing:3px;
+}
+
+.service{
+  display: flex;
+}
+.service div{
+ flex-wrap: wrap;
+}
+.service_right{
+ margin: 0 80px;
+}
+.break_line{
+  width:30px;
+  height: 5px;
+  background-color:rgb(48, 200, 214);;
+  margin:10px 0;
+}
+.service_right h2{
+     font-weight: bold;
+    color: #2b546a;
+    letter-spacing: 3px;
+    font-size: 32px;
+}
+.service_right h3{
+  margin:20px 0;
+  color:#5876a3;
+  letter-spacing:2px;
+}
+.service_right p{
+margin: 20px 0;
+text-align: left;
+line-height: 1.5em;
+font-size:18px;
+color: #8491a5;
+
+}
+/*CONTACT*/
+.contact p{
+  padding-bottom: 20px;
+ 
+}
+.contact form{
+  width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 40px;
+  padding-left:100px;
+  color: #2b546a;
+  background-color: #bfdae7;
+  font-weight: bold;
+
+}
+.contact h3{
+  border-bottom:2px solid #dee7ec;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+.contact label{
+ font-size:16px;
+}
+.contact label span{
+ color: #ff4a4a;
+ }
+
+ .contact_banner{
+  position: relative;
+  background-image: url(/img/contact_img.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  color: #fff; 
+ }
+
+ .contact_banner::before{
+   position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 31, 48, 0.8);
+     z-index:1;
+}
+.contact_head h1{
+  letter-spacing: 3px;;
+}
+
+input, textarea,button{
+  width:400px;
+  font-size:18px;
+  padding:20px;
+  margin-top:10px;
+  margin-bottom:30px;
+  border:1px solid #dee7ec;
+}
+
+
+.send-btn{
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+/*FOOTER*/
+footer{
+  background-color:#2f5167;
+  color:#fff;
+  padding:40px 40px;
+  display:block;
+  height: 180px;
+}
+
+
+footer ul{
+  float:right;
+}
+
+footer ul li{
+
+  margin-bottom:20px;
+}
+
+
+/*MEDIA QUERY*/
+
+
+@media screen and (max-width: 1200px){
+.heading h1{
+ font-size:100px;
+}
+.heading p{
+ font-size:60px;
+}
+
+.lesson div{
+ flex: 20%;
+ text-align: center;
+}
+
+
+}
+
+
+@media screen and (max-width: 1025px){
+
+  .lesson div{
+   flex: 50%;
+   text-align: center;
+}
+.heading h1{
+ font-size:80px;
+}
+.heading p{
+ font-size:40px;
+}
+
+.contact h3{text-align: left;}
+}
+
+
+
+@media screen and (max-width: 768px){
+  .lesson div{
+  flex: 100%;
+    text-align: center;
+  }
+
+  .heading h1{
+ font-size:80px;
+  text-align: center;
+}
+.heading p{
+ font-size:40px;
+  text-align: center;
+}
+
+}
