@@ -1,0 +1,58 @@
+<%- include('components/header')%>
+
+    <style>
+        .log_form{
+            display:flex;
+            margin:40px 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .log_form div{
+           flex:1
+        }
+        .log_left img{
+            width: 350px;
+            margin: 10px 10px;
+
+        }
+        .log_left{background-color: blueviolet;}
+        
+        .log_left,.log_right{
+          padding:20px
+
+        }
+        .log_form h3{
+            color: rgb(3, 0, 0);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .log_form  .send-btn{
+            background-color:blueviolet ;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <%- include('components/navbar')%>
+
+   <section class="log_form container">
+    <div class="log_left">
+        <img src="./img/login_img.png">
+
+    </div>
+    <div class="log_right" >
+        <h3>Login</h3>
+        <form id="loginForm" action="login" method="POST">
+            <label for="email">Email</label><br>
+            <input type="email" name="mail" id="email" required /><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" name="pass_wd" id="password" required /><br>
+            
+            <button class ="send-btn" id="sendBtn" >Login</button>
+        </form>       
+    </div>
+   </section>
+   <%- include('components/footer')%>
+</body>
+</html>

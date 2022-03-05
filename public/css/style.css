@@ -19,11 +19,17 @@ li {
   margin: 0;
 }
 
-.flex{display: flex; flex-wrap: wrap; justify-content: center;}
+.flex{display: flex; flex-wrap: wrap;}
 .nav{
   background-color:#26d0c9;
   color:#fff;
   height:90px;
+}
+.nav_right{
+  flex: 1;
+}
+.nav_left{
+  flex: 2;
 }
 .nav img,footer img{
   width: 115px;
