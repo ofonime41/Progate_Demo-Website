@@ -4,8 +4,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const db=require('./dbConnection');
 const sessionStorage=require('node-sessionstorage');
-const { Router } = require('express');
 const { end } = require('./dbConnection');
+const router = express.Router();
+// const { Router } = require('express');
+// const { end } = require('./dbConnection');
 // const { set } = require('express/lib/application');
 
 //views engine
@@ -14,8 +16,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
 
 app.get('/', (req,res)=>{
-
-    res.render('index', {title:"Home"});
+   let session=sessionStorage.getItem('user');
+    res.render('index', {title:"Home",session:session});
+   
 });
 
 app.get('/about', (req,res)=>{
@@ -73,20 +76,13 @@ let userQuery = app.post( '/login', (req,res,next)=>{
     if(result.RowDataPacket=!null){
       console.log("user logged in");
       console.log(result[0]);
-      
-      app.get('/', (req,res)=>{
-        sessionStorage.setItem('user',result[0]);
-      let tagline= sessionStorage.getItem('user');
-      res.render('index',{tagline:req.tagline} );
-   
-    })
-    
-};
-    res.redirect('/');
+      sessionStorage.setItem('user',result[0]);
+      res.redirect('/');
+    };
+
   });
-  
-  
-      
+    
 });
+
 
 app.listen(3000);

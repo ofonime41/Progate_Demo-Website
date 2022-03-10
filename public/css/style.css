@@ -51,7 +51,15 @@ li {
 .container{
     margin:90px 80px;
 }
+.user_info{
+  margin-top:-15px;
 
+}
+
+.user_info i{
+  font-size: 30px;
+  padding-left:10px;
+}
 .main-heading{
   position: relative;
   background-image: url(/img/laptop.jpg) ;

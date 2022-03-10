@@ -29,4 +29,8 @@ contactForm.addEventListener("submit",(e) =>{
 });
 
 
-
+if(session=true){
+	console.log("i can acess the session variable")
+}else{
+	
+}

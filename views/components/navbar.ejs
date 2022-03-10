@@ -13,12 +13,23 @@
      </ul>
 
   </div>
+
+  <% if(session){%>
+    <div class="nav_right user_info">
+      <ul color="red">
+        <li><a href=""></a><i class="fa fa-user"></i><br><%=`${session.name}`%></a></li>
+        <li><a href="">Logout</a></li>
+      </ul>
+    </div>
+  <%}else{%>
   <div class="nav_right">
     <ul color="red">
       <li><a href="/login">Login</a></li>
       <li><a href="">Register</a></li>
     </ul>
   </div>
+  <%}%>
+  
 </div>
 
 
