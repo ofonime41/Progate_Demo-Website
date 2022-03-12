@@ -4,11 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const db=require('./dbConnection');
 const sessionStorage=require('node-sessionstorage');
-const { end } = require('./dbConnection');
 const router = express.Router();
-// const { Router } = require('express');
-// const { end } = require('./dbConnection');
-// const { set } = require('express/lib/application');
 
 //views engine
 app.set('view engine', 'ejs');
@@ -18,7 +14,6 @@ app.use(express.urlencoded({ extended: true}));
 app.get('/', (req,res)=>{
    let session=sessionStorage.getItem('user');
     res.render('index', {title:"Home",session:session});
-   
 });
 
 app.get('/about', (req,res)=>{
@@ -37,8 +32,7 @@ app.get('/contact', (req,res)=>{
 });
 
 app.get('/login', (req,res)=>{
-
-  res.render('login',{title:"login"});
+  res.render('login',{title:"login",session:null});
 });
 
 
@@ -74,8 +68,6 @@ let userQuery = app.post( '/login', (req,res,next)=>{
   db.query(querydb,(err, result)=>{
     if(err) throw err;
     if(result.RowDataPacket=!null){
-      console.log("user logged in");
-      console.log(result[0]);
       sessionStorage.setItem('user',result[0]);
       res.redirect('/');
     };
@@ -84,5 +76,9 @@ let userQuery = app.post( '/login', (req,res,next)=>{
     
 });
 
+app.get('/logout',(req,res)=>{
+  sessionStorage.setItem('user',null);
+  res.redirect('/');
+});
 
 app.listen(3000);

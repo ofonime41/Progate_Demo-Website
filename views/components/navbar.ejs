@@ -13,12 +13,11 @@
      </ul>
 
   </div>
-
   <% if(session){%>
     <div class="nav_right user_info">
       <ul color="red">
         <li><a href=""></a><i class="fa fa-user"></i><br><%=`${session.name}`%></a></li>
-        <li><a href="">Logout</a></li>
+        <li><a href="/logout">Logout</a></li>
       </ul>
     </div>
   <%}else{%>
